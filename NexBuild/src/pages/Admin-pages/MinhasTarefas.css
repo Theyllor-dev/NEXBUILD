@@ -1,4 +1,3 @@
-*/* NexBuild — Central de ordens de serviço | visual refinado */*
 .nex-tarefas {
     --os-accent: #8d69f1;
     --os-accent2: #b49aff;
@@ -1021,212 +1020,564 @@ body.tema-claro .nex-tarefas .nex-tarefas-erro {
     .nex-tarefas .os-attachments button {
         width: 100%
     }
-}/* Central de operações: visão de todas as equipes para administradores */
-.nex-tarefas .os-admin-metrics{grid-template-columns:repeat(4,minmax(0,1fr));}
-.nex-tarefas .os-admin-filters{margin:24px 0 28px;padding:22px;border:1px solid rgba(153,125,235,.23);border-radius:20px;background:linear-gradient(145deg,rgba(91,64,160,.13),rgba(22,20,38,.75));}
-.nex-tarefas .os-filter-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;}
-.nex-tarefas .os-filter-title h2{margin:0;}
-.nex-tarefas .os-filter-title span{font-size:12px;color:#aaa2bf;}
-.nex-tarefas .os-team-pills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:18px;}
-.nex-tarefas .os-team-pills button{background:#211c34;border:1px solid #413758;border-radius:11px;color:#e9e3fa;padding:11px 13px;cursor:pointer;font:inherit;transition:background .2s,border-color .2s,transform .2s;}
-.nex-tarefas .os-team-pills button:hover{border-color:#9977e7;transform:translateY(-1px);}
-.nex-tarefas .os-team-pills button.ativo{background:#7049c8;border-color:#9b79f4;color:white;}
-.nex-tarefas .os-team-pills small{margin-left:8px;opacity:.8;}
-.nex-tarefas .os-filter-controls{display:grid;grid-template-columns:minmax(0,2fr) minmax(180px,1fr);gap:14px;}
-.nex-tarefas .os-filter-controls label{display:flex;flex-direction:column;gap:8px;font-size:13px;color:#d8d0e8;}
-.nex-tarefas .os-filter-controls input,.nex-tarefas .os-filter-controls select{width:100%;box-sizing:border-box;background:#171427;border:1px solid #453b5d;color:#f4efff;padding:12px 14px;border-radius:11px;font:inherit;outline:none;}
-.nex-tarefas .os-filter-controls input:focus,.nex-tarefas .os-filter-controls select:focus{border-color:#a27cf7;box-shadow:0 0 0 3px rgba(162,124,247,.14);}
-.nex-tarefas .os-admin-tags{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0;}
-.nex-tarefas .os-admin-tags span{font-size:11px;line-height:1.5;padding:5px 9px;border-radius:8px;background:rgba(122,94,198,.16);border:1px solid rgba(143,113,212,.22);color:#d7c9f8;}
-body.tema-claro .nex-tarefas .os-admin-filters{background:#f6faf7;border-color:#cbded2;}
-body.tema-claro .nex-tarefas .os-filter-title span,body.tema-claro .nex-tarefas .os-filter-controls label{color:#476454;}
-body.tema-claro .nex-tarefas .os-team-pills button{background:white;color:#19462e;border-color:#c6dccc;}
-body.tema-claro .nex-tarefas .os-team-pills button.ativo{background:#187747;color:white;border-color:#187747;}
-body.tema-claro .nex-tarefas .os-filter-controls input,body.tema-claro .nex-tarefas .os-filter-controls select{background:white;color:#183b28;border-color:#b9d5c4;}
-body.tema-claro .nex-tarefas .os-admin-tags span{background:#e7f5ec;border-color:#b8dcc6;color:#1c6240;}
-@media(max-width:900px){.nex-tarefas .os-admin-metrics{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media(max-width:600px){.nex-tarefas .os-filter-controls{grid-template-columns:1fr;}.nex-tarefas .os-filter-title{align-items:flex-start;flex-direction:column;}}
+}
+
+/* Central de operações: visão de todas as equipes para administradores */
+.nex-tarefas .os-admin-metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.nex-tarefas .os-admin-filters {
+    margin: 24px 0 28px;
+    padding: 22px;
+    border: 1px solid rgba(153, 125, 235, .23);
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(91, 64, 160, .13), rgba(22, 20, 38, .75));
+}
+
+.nex-tarefas .os-filter-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.nex-tarefas .os-filter-title h2 {
+    margin: 0;
+}
+
+.nex-tarefas .os-filter-title span {
+    font-size: 12px;
+    color: #aaa2bf;
+}
+
+.nex-tarefas .os-team-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 18px;
+}
+
+.nex-tarefas .os-team-pills button {
+    background: #211c34;
+    border: 1px solid #413758;
+    border-radius: 11px;
+    color: #e9e3fa;
+    padding: 11px 13px;
+    cursor: pointer;
+    font: inherit;
+    transition: background .2s, border-color .2s, transform .2s;
+}
+
+.nex-tarefas .os-team-pills button:hover {
+    border-color: #9977e7;
+    transform: translateY(-1px);
+}
+
+.nex-tarefas .os-team-pills button.ativo {
+    background: #7049c8;
+    border-color: #9b79f4;
+    color: white;
+}
+
+.nex-tarefas .os-team-pills small {
+    margin-left: 8px;
+    opacity: .8;
+}
+
+.nex-tarefas .os-filter-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr);
+    gap: 14px;
+}
+
+.nex-tarefas .os-filter-controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    color: #d8d0e8;
+}
+
+.nex-tarefas .os-filter-controls input,
+.nex-tarefas .os-filter-controls select {
+    width: 100%;
+    box-sizing: border-box;
+    background: #171427;
+    border: 1px solid #453b5d;
+    color: #f4efff;
+    padding: 12px 14px;
+    border-radius: 11px;
+    font: inherit;
+    outline: none;
+}
+
+.nex-tarefas .os-filter-controls input:focus,
+.nex-tarefas .os-filter-controls select:focus {
+    border-color: #a27cf7;
+    box-shadow: 0 0 0 3px rgba(162, 124, 247, .14);
+}
+
+.nex-tarefas .os-admin-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0;
+}
+
+.nex-tarefas .os-admin-tags span {
+    font-size: 11px;
+    line-height: 1.5;
+    padding: 5px 9px;
+    border-radius: 8px;
+    background: rgba(122, 94, 198, .16);
+    border: 1px solid rgba(143, 113, 212, .22);
+    color: #d7c9f8;
+}
+
+body.tema-claro .nex-tarefas .os-admin-filters {
+    background: #f6faf7;
+    border-color: #cbded2;
+}
+
+body.tema-claro .nex-tarefas .os-filter-title span,
+body.tema-claro .nex-tarefas .os-filter-controls label {
+    color: #476454;
+}
+
+body.tema-claro .nex-tarefas .os-team-pills button {
+    background: white;
+    color: #19462e;
+    border-color: #c6dccc;
+}
+
+body.tema-claro .nex-tarefas .os-team-pills button.ativo {
+    background: #187747;
+    color: white;
+    border-color: #187747;
+}
+
+body.tema-claro .nex-tarefas .os-filter-controls input,
+body.tema-claro .nex-tarefas .os-filter-controls select {
+    background: white;
+    color: #183b28;
+    border-color: #b9d5c4;
+}
+
+body.tema-claro .nex-tarefas .os-admin-tags span {
+    background: #e7f5ec;
+    border-color: #b8dcc6;
+    color: #1c6240;
+}
+
+@media(max-width:900px) {
+    .nex-tarefas .os-admin-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width:600px) {
+    .nex-tarefas .os-filter-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .nex-tarefas .os-filter-title {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
 
 /* Modal renderizado diretamente no body: independente do scroll do dashboard */
-.os-portal-root { position: fixed; inset: 0; z-index: 99999; padding: 0 !important; margin: 0 !important; max-width: none !important; width: 100vw; height: 100dvh; pointer-events: none; }
-.os-portal-root .os-backdrop { position: fixed; inset: 0; pointer-events: auto; }
-.os-portal-root .os-drawer { height: 100dvh; max-height: 100dvh; min-height: 0; scroll-behavior: auto; }
+.os-portal-root {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100vw;
+    height: 100dvh;
+    pointer-events: none;
+}
+
+.os-portal-root .os-backdrop {
+    position: fixed;
+    inset: 0;
+    pointer-events: auto;
+}
+
+.os-portal-root .os-drawer {
+    height: 100dvh;
+    max-height: 100dvh;
+    min-height: 0;
+    scroll-behavior: auto;
+}
 
 
 /* NexBuild compact refinement — 2026-11 */
-.admin .nex-tarefas{padding:clamp(12px,1.7vw,22px)}.admin .nex-tarefas h1{font-size:clamp(1.35rem,2vw,1.85rem)}.admin .nex-tarefas h2{margin:18px 0 10px}.admin .os-heading{margin-bottom:15px}
+.admin .nex-tarefas {
+    padding: clamp(12px, 1.7vw, 22px)
+}
+
+.admin .nex-tarefas h1 {
+    font-size: clamp(1.35rem, 2vw, 1.85rem)
+}
+
+.admin .nex-tarefas h2 {
+    margin: 18px 0 10px
+}
+
+.admin .os-heading {
+    margin-bottom: 15px
+}
 
 
 /* NexBuild Tarefas 2.0 — refinamento visual sem alterar o backend */
 .nex-tarefas {
-  --os-v2-bg: #131528;
-  --os-v2-border: rgba(178, 157, 244, .14);
-  --os-v2-muted: #a9abc3;
-  padding: clamp(16px, 2vw, 30px);
+    --os-v2-bg: #131528;
+    --os-v2-border: rgba(178, 157, 244, .14);
+    --os-v2-muted: #a9abc3;
+    padding: clamp(16px, 2vw, 30px);
 }
+
 .nex-tarefas .os-heading-v2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 6px 0 16px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid var(--os-v2-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 0 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--os-v2-border);
 }
+
 .nex-tarefas .os-heading-v2 h1 {
-  font-size: clamp(1.45rem, 2.3vw, 2.05rem);
-  letter-spacing: -.045em;
-  margin: 6px 0;
+    font-size: clamp(1.45rem, 2.3vw, 2.05rem);
+    letter-spacing: -.045em;
+    margin: 6px 0;
 }
-.nex-tarefas .os-heading-v2 p { max-width: 570px; font-size: .87rem; margin-top: 6px; }
+
+.nex-tarefas .os-heading-v2 p {
+    max-width: 570px;
+    font-size: .87rem;
+    margin-top: 6px;
+}
+
 .nex-tarefas button.os-refresh-v2 {
-  flex-shrink: 0;
-  background: rgba(135, 95, 224, .13);
-  border: 1px solid rgba(166, 137, 238, .25);
-  color: #d9caff;
-  padding: 10px 14px;
+    flex-shrink: 0;
+    background: rgba(135, 95, 224, .13);
+    border: 1px solid rgba(166, 137, 238, .25);
+    color: #d9caff;
+    padding: 10px 14px;
 }
+
 .nex-tarefas .os-metrics,
-.nex-tarefas .os-admin-metrics { gap: 12px; margin: 18px 0 22px; }
-.nex-tarefas .os-metrics > div {
-  min-height: 95px;
-  padding: 18px;
-  border-radius: 14px;
-  background: rgba(27, 27, 48, .85);
-  box-shadow: none;
+.nex-tarefas .os-admin-metrics {
+    gap: 12px;
+    margin: 18px 0 22px;
 }
-.nex-tarefas .os-metrics strong { font-size: 1.75rem; }
-.nex-tarefas .os-metrics span { font-size: .78rem; line-height: 1.4; }
+
+.nex-tarefas .os-metrics>div {
+    min-height: 95px;
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(27, 27, 48, .85);
+    box-shadow: none;
+}
+
+.nex-tarefas .os-metrics strong {
+    font-size: 1.75rem;
+}
+
+.nex-tarefas .os-metrics span {
+    font-size: .78rem;
+    line-height: 1.4;
+}
+
 .nex-tarefas .os-admin-filters {
-  border: 1px solid var(--os-v2-border);
-  background: rgba(24, 24, 44, .56);
-  border-radius: 16px;
-  padding: clamp(14px, 2vw, 22px);
-  margin-bottom: 22px;
+    border: 1px solid var(--os-v2-border);
+    background: rgba(24, 24, 44, .56);
+    border-radius: 16px;
+    padding: clamp(14px, 2vw, 22px);
+    margin-bottom: 22px;
 }
-.nex-tarefas .os-team-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-.nex-tarefas .os-team-pills button { border-radius: 999px; padding: 8px 12px; }
+
+.nex-tarefas .os-team-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nex-tarefas .os-team-pills button {
+    border-radius: 999px;
+    padding: 8px 12px;
+}
+
 .nex-tarefas .os-list-heading-v2 {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 12px;
-  margin: 22px 0 14px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 22px 0 14px;
 }
-.nex-tarefas .os-list-heading-v2 h2 { margin: 5px 0 0; font-size: 1.12rem; }
+
+.nex-tarefas .os-list-heading-v2 h2 {
+    margin: 5px 0 0;
+    font-size: 1.12rem;
+}
+
 .nex-tarefas .os-count-v2 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3px 9px;
-  border-radius: 999px;
-  background: rgba(142, 108, 236, .18);
-  color: #cdb8ff;
-  font-size: .72rem;
-  vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(142, 108, 236, .18);
+    color: #cdb8ff;
+    font-size: .72rem;
+    vertical-align: middle;
 }
-.nex-tarefas .os-list-caption-v2 { color: var(--os-v2-muted); font-size: .78rem; }
+
+.nex-tarefas .os-list-caption-v2 {
+    color: var(--os-v2-muted);
+    font-size: .78rem;
+}
+
 .nex-tarefas .nex-tarefas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
-  gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+    gap: 12px;
 }
+
 .nex-tarefas .os-task-v2 {
-  min-height: 0;
-  gap: 10px;
-  padding: 18px;
-  border-radius: 15px;
-  background: linear-gradient(155deg, #1b1b32, #141629);
-  border: 1px solid var(--os-v2-border);
-  box-shadow: none;
+    min-height: 0;
+    gap: 10px;
+    padding: 18px;
+    border-radius: 15px;
+    background: linear-gradient(155deg, #1b1b32, #141629);
+    border: 1px solid var(--os-v2-border);
+    box-shadow: none;
 }
-.nex-tarefas .os-task-v2:hover { transform: translateY(-2px); border-color: rgba(168, 137, 242, .45); }
-.nex-tarefas .os-task-v2 h3 { font-size: 1rem; line-height: 1.35; margin: 0; }
-.nex-tarefas .os-task-v2 p { font-size: .82rem; line-height: 1.5; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-.nex-tarefas .os-task-v2 .os-admin-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.nex-tarefas .os-task-v2 .os-admin-tags span { font-size: .7rem; }
+
+.nex-tarefas .os-task-v2:hover {
+    transform: translateY(-2px);
+    border-color: rgba(168, 137, 242, .45);
+}
+
+.nex-tarefas .os-task-v2 h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.nex-tarefas .os-task-v2 p {
+    font-size: .82rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.nex-tarefas .os-task-v2 .os-admin-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.nex-tarefas .os-task-v2 .os-admin-tags span {
+    font-size: .7rem;
+}
+
 .nex-tarefas .os-task-v2 button.os-main-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  margin-top: 4px;
-  font-size: .81rem;
-  box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-top: 4px;
+    font-size: .81rem;
+    box-shadow: none;
 }
-.nex-tarefas .os-drawer { scrollbar-gutter: stable; }
-.nex-tarefas .os-drawer-head { min-height: 92px; }
-body.tema-claro .nex-tarefas { --os-v2-border: #dbe6de; --os-v2-muted: #667b6e; }
+
+.nex-tarefas .os-drawer {
+    scrollbar-gutter: stable;
+}
+
+.nex-tarefas .os-drawer-head {
+    min-height: 92px;
+}
+
+body.tema-claro .nex-tarefas {
+    --os-v2-border: #dbe6de;
+    --os-v2-muted: #667b6e;
+}
+
 body.tema-claro .nex-tarefas .os-admin-filters,
-body.tema-claro .nex-tarefas .os-metrics > div,
-body.tema-claro .nex-tarefas .os-task-v2 { background: #fff; border-color: #dbe6de; box-shadow: none; }
-body.tema-claro .nex-tarefas button.os-refresh-v2 { background: #edf7f0; border-color: #c6e1ce; color: #216f43; }
-body.tema-claro .nex-tarefas .os-count-v2 { background: #e7f5eb; color: #237e4a; }
-@media (max-width: 700px) {
-  .nex-tarefas { padding: 12px 12px calc(96px + env(safe-area-inset-bottom, 0px)); }
-  .nex-tarefas .os-heading-v2 { flex-direction: row; align-items: flex-start; gap: 10px; }
-  .nex-tarefas .os-heading-v2 h1 { font-size: 1.35rem; }
-  .nex-tarefas .os-heading-v2 p { font-size: .77rem; }
-  .nex-tarefas button.os-refresh-v2 { font-size: .75rem; padding: 9px 10px; }
-  .nex-tarefas .os-metrics,
-  .nex-tarefas .os-admin-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin: 14px 0; }
-  .nex-tarefas .os-metrics > div { min-height: 82px; padding: 13px; }
-  .nex-tarefas .os-metrics strong { font-size: 1.5rem; }
-  .nex-tarefas .os-metrics span { font-size: .72rem; }
-  .nex-tarefas .os-list-caption-v2 { display: none; }
-  .nex-tarefas .nex-tarefas-grid { grid-template-columns: 1fr; gap: 10px; }
-  .nex-tarefas .os-task-v2 { padding: 15px; }
-  .nex-tarefas .os-drawer { padding-bottom: calc(26px + env(safe-area-inset-bottom, 0px)); }
+body.tema-claro .nex-tarefas .os-metrics>div,
+body.tema-claro .nex-tarefas .os-task-v2 {
+    background: #fff;
+    border-color: #dbe6de;
+    box-shadow: none;
 }
+
+body.tema-claro .nex-tarefas button.os-refresh-v2 {
+    background: #edf7f0;
+    border-color: #c6e1ce;
+    color: #216f43;
+}
+
+body.tema-claro .nex-tarefas .os-count-v2 {
+    background: #e7f5eb;
+    color: #237e4a;
+}
+
+@media (max-width: 700px) {
+    .nex-tarefas {
+        padding: 12px 12px calc(96px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .nex-tarefas .os-heading-v2 {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nex-tarefas .os-heading-v2 h1 {
+        font-size: 1.35rem;
+    }
+
+    .nex-tarefas .os-heading-v2 p {
+        font-size: .77rem;
+    }
+
+    .nex-tarefas button.os-refresh-v2 {
+        font-size: .75rem;
+        padding: 9px 10px;
+    }
+
+    .nex-tarefas .os-metrics,
+    .nex-tarefas .os-admin-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        margin: 14px 0;
+    }
+
+    .nex-tarefas .os-metrics>div {
+        min-height: 82px;
+        padding: 13px;
+    }
+
+    .nex-tarefas .os-metrics strong {
+        font-size: 1.5rem;
+    }
+
+    .nex-tarefas .os-metrics span {
+        font-size: .72rem;
+    }
+
+    .nex-tarefas .os-list-caption-v2 {
+        display: none;
+    }
+
+    .nex-tarefas .nex-tarefas-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .nex-tarefas .os-task-v2 {
+        padding: 15px;
+    }
+
+    .nex-tarefas .os-drawer {
+        padding-bottom: calc(26px + env(safe-area-inset-bottom, 0px));
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .nex-tarefas .os-task-v2 { transition: none; }
+    .nex-tarefas .os-task-v2 {
+        transition: none;
+    }
 }
 
 
 /* Correção mobile: ações acessíveis acima da navegação fixa */
 @media (max-width: 700px) {
-  .admin .admin-content:has(.nex-tarefas) {
-    box-sizing: border-box;
-    overflow-x: clip;
-    padding-bottom: calc(125px + env(safe-area-inset-bottom, 0px));
-    min-height: 100dvh;
-  }
-  .admin .nex-tarefas {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    padding: 12px 10px calc(155px + env(safe-area-inset-bottom, 0px));
-    overflow: visible;
-  }
-  .nex-tarefas .nex-tarefas-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-    padding-bottom: 20px;
-  }
-  .nex-tarefas .os-task-v2 {
-    width: 100%;
-    min-width: 0;
-    padding: 14px;
-    cursor: pointer;
-    overflow: visible;
-  }
-  .nex-tarefas .os-task-v2 .nex-tarefas-top { flex-wrap: wrap; gap: 8px; }
-  .nex-tarefas .os-task-v2 .os-admin-tags { margin: 5px 0; }
-  .nex-tarefas .os-task-v2 button.os-main-btn {
-    min-height: 44px;
-    position: relative;
-    z-index: 1;
-    touch-action: manipulation;
-  }
-  .nex-tarefas .os-heading-v2 { flex-wrap: wrap; }
-  .nex-tarefas .os-admin-filters { padding: 12px; }
-  .nex-tarefas .os-filter-controls > * { min-width: 0; }
-  .nex-tarefas .os-filter-controls input,
-  .nex-tarefas .os-filter-controls select { max-width: 100%; }
-  .nex-tarefas .os-portal-root { padding: 0 !important; }
-  .nex-tarefas .os-portal-root .os-drawer { padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px)); }
+    .admin .admin-content:has(.nex-tarefas) {
+        box-sizing: border-box;
+        overflow-x: clip;
+        padding-bottom: calc(125px + env(safe-area-inset-bottom, 0px));
+        min-height: 100dvh;
+    }
+
+    .admin .nex-tarefas {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 12px 10px calc(155px + env(safe-area-inset-bottom, 0px));
+        overflow: visible;
+    }
+
+    .nex-tarefas .nex-tarefas-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding-bottom: 20px;
+    }
+
+    .nex-tarefas .os-task-v2 {
+        width: 100%;
+        min-width: 0;
+        padding: 14px;
+        cursor: pointer;
+        overflow: visible;
+    }
+
+    .nex-tarefas .os-task-v2 .nex-tarefas-top {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nex-tarefas .os-task-v2 .os-admin-tags {
+        margin: 5px 0;
+    }
+
+    .nex-tarefas .os-task-v2 button.os-main-btn {
+        min-height: 44px;
+        position: relative;
+        z-index: 1;
+        touch-action: manipulation;
+    }
+
+    .nex-tarefas .os-heading-v2 {
+        flex-wrap: wrap;
+    }
+
+    .nex-tarefas .os-admin-filters {
+        padding: 12px;
+    }
+
+    .nex-tarefas .os-filter-controls>* {
+        min-width: 0;
+    }
+
+    .nex-tarefas .os-filter-controls input,
+    .nex-tarefas .os-filter-controls select {
+        max-width: 100%;
+    }
+
+    .nex-tarefas .os-portal-root {
+        padding: 0 !important;
+    }
+
+    .nex-tarefas .os-portal-root .os-drawer {
+        padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px));
+    }
 }
-@media (hover: none) { .nex-tarefas .os-task-v2:hover { transform: none; } }
+
+@media (hover: none) {
+    .nex-tarefas .os-task-v2:hover {
+        transform: none;
+    }
+}
