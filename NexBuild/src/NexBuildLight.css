@@ -1,0 +1,143 @@
+/* NexBuild · Light Refresh 2026
+   Camada isolada: não altera o modo escuro nem a lógica React/API. */
+body.tema-claro {
+  color-scheme: light;
+  --ca-bg: #f6f7fb;
+  --ca-surface: #ffffff;
+  --ca-surface-raised: #fafbfe;
+  --ca-border: #e7eaf1;
+  --ca-text: #242b3b;
+  --ca-muted: #737f92;
+  --ca-accent: #168653;
+  --ca-accent-hover: #106b41;
+  --ca-shadow: 0 8px 28px rgba(27,36,60,.045);
+  background: var(--ca-bg);
+  color: var(--ca-text);
+}
+body.tema-claro .admin {
+  background: #f6f7fb;
+  color: var(--ca-text);
+  animation: none;
+}
+body.tema-claro .admin-content { background: transparent; }
+/* Sidebar mais calma e limpa */
+body.tema-claro .sidebar {
+  background: #fff;
+  border-right: 1px solid #e9ecf2;
+  box-shadow: none;
+}
+body.tema-claro .logo-icon { background: #7661d7; box-shadow: none; color: #fff; }
+body.tema-claro .sidebar .logo-text h2,
+body.tema-claro .sidebar h2 { color: #242b3b; }
+body.tema-claro .sidebar .logo-text span,
+body.tema-claro .sidebar .menu-title { color: #8992a3; }
+body.tema-claro .sidebar .menu-item {
+  color: #667186;
+  border-radius: 11px;
+  transition: background-color .18s ease, color .18s ease, transform .18s ease;
+}
+body.tema-claro .sidebar .menu-item:hover { background: #f3f1fc; color: #6550c8; transform: translateX(2px); }
+body.tema-claro .sidebar .menu-item.active,
+body.tema-claro .sidebar .menu-item.ativo,
+body.tema-claro .sidebar .menu-item[aria-current="page"] {
+  background: #f0edfb; color: #6650c9; border-color: #ddd5fa; box-shadow: none;
+}
+/* Cards, lista, mapa e gráficos compartilham o mesmo acabamento */
+body.tema-claro .indicador-card,
+body.tema-claro .lista-denuncias,
+body.tema-claro .nex-lista,
+body.tema-claro .grafico-card,
+body.tema-claro .mapa-denuncias,
+body.tema-claro .mapa-area,
+body.tema-claro .mapa-painel-principal,
+body.tema-claro .mapa-lista-painel,
+body.tema-claro .mapa-indicador,
+body.tema-claro .denuncia-card,
+body.tema-claro .notas-area-criacao,
+body.tema-claro .notas-historico {
+  background: #fff;
+  border: 1px solid #e7eaf1;
+  box-shadow: 0 7px 24px rgba(28,39,66,.045);
+}
+body.tema-claro .indicador-card,
+body.tema-claro .grafico-card,
+body.tema-claro .mapa-indicador {
+  transition: transform .22s cubic-bezier(.2,.7,.2,1), box-shadow .22s ease, border-color .22s ease;
+}
+body.tema-claro .indicador-card:hover,
+body.tema-claro .grafico-card:hover,
+body.tema-claro .mapa-indicador:hover {
+  transform: translateY(-3px);
+  border-color: #dcd8f3;
+  box-shadow: 0 14px 34px rgba(42,35,85,.085);
+}
+body.tema-claro .grafico-topo,
+body.tema-claro .grafico-rodape { border-color: #edf0f5; background: #fff; }
+body.tema-claro .grafico-topo h2,
+body.tema-claro .mapa-cabecalho h1,
+body.tema-claro .mapa-painel-cabecalho h3,
+body.tema-claro .mapa-lista-cabecalho h3 { color: #242b3b; }
+body.tema-claro .grafico-topo p,
+body.tema-claro .grafico-rodape,
+body.tema-claro .mapa-cabecalho p { color: #7d8798; }
+body.tema-claro .grafico-etiqueta,
+body.tema-claro .mapa-etiqueta { color: #7661d7; }
+body.tema-claro .grafico-resumo {
+  background: #f3f0fc;
+  border: 1px solid #e6defb;
+}
+body.tema-claro .grafico-resumo strong { color: #6b55c9; }
+body.tema-claro .grafico-resumo span { color: #7d729c; }
+body.tema-claro .grafico-bolinha { background: #806bdc; box-shadow: 0 0 0 4px #eeeafb; }
+/* Remove a sensação de tabela pesada, sem alterar estrutura nem scroll horizontal */
+body.tema-claro .lista-topo,
+body.tema-claro .nex-topo,
+body.tema-claro .filtros-denuncias { background: #fff; border-color: #edf0f5; }
+body.tema-claro .tabela-denuncias,
+body.tema-claro .nex-lista { border-color: #e7eaf1; }
+body.tema-claro .tabela-denuncias tbody tr,
+body.tema-claro .nex-lista tbody tr { transition: background-color .18s ease; }
+body.tema-claro .tabela-denuncias tbody tr:hover,
+body.tema-claro .nex-lista tbody tr:hover { background: #f8f7fe; }
+/* Campos e ações: foco acessível e feedback sutil */
+body.tema-claro .admin input:not([type="checkbox"]):not([type="radio"]),
+body.tema-claro .admin select,
+body.tema-claro .admin textarea {
+  border-color: #e2e6ee;
+  transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+body.tema-claro .admin input:focus-visible,
+body.tema-claro .admin select:focus-visible,
+body.tema-claro .admin textarea:focus-visible,
+body.tema-claro .admin button:focus-visible,
+body.tema-claro .sidebar a:focus-visible {
+  outline: 2px solid #806bdc;
+  outline-offset: 2px;
+}
+body.tema-claro .admin button { transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease; }
+body.tema-claro .admin button:active { transform: scale(.985); }
+/* Evita colorização global do mapa; mantém cores semânticas dos marcadores */
+body.tema-claro .mapa .leaflet-tile { filter: none; }
+/* Entrada suave, uma vez ao montar, sem piscar em cada atualização dos dados */
+@keyframes nex-entrar { from {opacity:0;transform:translateY(10px)} to {opacity:1;transform:translateY(0)} }
+body.tema-claro .admin-content > .dashboard-principal,
+body.tema-claro .dashboard-principal > .graficos-dashboard,
+body.tema-claro .dashboard-principal > .indicadores { animation: nex-entrar .45s ease both; }
+@media (max-width: 700px) {
+  body.tema-claro .sidebar { border-right: 0; border-bottom: 1px solid #e9ecf2; }
+  body.tema-claro .indicador-card:hover,
+  body.tema-claro .grafico-card:hover,
+  body.tema-claro .mapa-indicador:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.tema-claro .admin *, body.tema-claro .admin *::before, body.tema-claro .admin *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* NexBuild compact refinement — 2026-11 */
+body.tema-claro .admin{--ca-accent:#168653;--ca-accent-hover:#106b41}body.tema-claro .admin .sidebar .menu-item.active,body.tema-claro .admin .sidebar .menu-item.ativo,body.tema-claro .admin .sidebar .menu-item[aria-current="page"]{background:#e8f5ed;color:#106b41;border-color:#c9e7d5}body.tema-claro .admin .sidebar .menu-item:hover{background:#edf7f0;color:#106b41}body.tema-claro .admin .logo-icon{background:#168653}

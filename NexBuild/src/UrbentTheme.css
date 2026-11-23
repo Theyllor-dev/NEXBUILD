@@ -1,0 +1,48 @@
+/* URBENT — identidade visual inicial do painel. */
+:root { --urbent-navy:#031329; --urbent-blue:#237BFA; --urbent-paper:#F5F7FB; --urbent-text:#10243D; }
+.admin { background:#06172c !important; background-image:none !important; color:#f5f8ff; animation:none !important; }
+body.tema-claro .admin { background:var(--urbent-paper) !important; background-image:none !important; color:var(--urbent-text); }
+.admin .sidebar { background:var(--urbent-navy); border-right:1px solid rgba(120,159,210,.17); }
+.admin .logo-icon { background:var(--urbent-blue); color:#fff; box-shadow:none; font-weight:800; }
+.admin .topo h2 { letter-spacing:.025em; }
+.admin .header-search { border-radius:12px; }
+@media (prefers-reduced-motion:reduce) { .admin, .admin * { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+
+/* URBENT - tema unificado */
+:root { --urbent-blue:#237bfa; --urbent-navy:#031329; --urbent-white:#fff; }
+body.tema-claro { --ca-accent:#237bfa; --ca-accent-hover:#155cc7; --ca-bg:#f5f8ff; --ca-border:#dce7f6; }
+body.tema-claro .admin .sidebar { background:#fff; border-right-color:#e1eaf7; }
+body.tema-claro .admin .logo-icon { background:#237bfa; color:#fff; }
+body.tema-claro .admin .sidebar .menu-item:hover { background:#edf4ff; color:#155cc7; }
+body.tema-claro .admin .sidebar .menu-item.active,body.tema-claro .admin .sidebar .menu-item.ativo,body.tema-claro .admin .sidebar .menu-item[aria-current="page"] { background:#e9f2ff; color:#155cc7; border-color:#c7dcff; }
+body.tema-claro .admin input:focus-visible,body.tema-claro .admin button:focus-visible,body.tema-claro .admin select:focus-visible,body.tema-claro .admin textarea:focus-visible { outline-color:#237bfa; }
+.home-container { --sinal:#237bfa; --nb-acento:#237bfa; --placa:#237bfa; }
+.home-container .urbent-brand-home { display:block; width:clamp(105px,13vw,148px); height:43px; object-fit:contain; object-position:left center; }
+.urbent-sidebar-logo { display:block; width:48px; height:42px; object-fit:cover; object-position:left center; flex-shrink:0; }
+body.tema-claro .urbent-sidebar-logo { filter:brightness(.2); }
+@media(max-width:700px) { .home-container .urbent-brand-home { width:112px; height:30px; } .home-container .home-header { max-width:calc(100vw - 24px); } }
+
+/* Logo original do Figma, adaptada para os dois fundos */
+.urbent-sidebar-logo {width:clamp(116px,11vw,160px);height:42px;object-fit:contain;object-position:left center;}
+body.tema-claro .urbent-sidebar-logo {filter:none;}
+body.tema-claro .admin .sidebar .urbent-sidebar-logo {content:url('./assets/urbent-logo.png');}
+.home-container .urbent-brand-home {width:clamp(105px,13vw,148px);height:42px;object-fit:contain;}
+@media(max-width:700px){.home-container .urbent-brand-home{width:112px;height:29px;}}
+
+
+/* URBENT Emerald: alterações EXCLUSIVAS para o modo claro.
+   Não aplicar alterações globais ou ao modo escuro. */
+body.tema-claro {
+  --ca-accent:#10b981;
+  --ca-accent-hover:#047857;
+  --ca-bg:#f8fafc;
+  --ca-border:#dbece4;
+}
+body.tema-claro .admin .logo-icon {background:#10b981;color:#fff;}
+body.tema-claro .admin .sidebar .menu-item:hover {background:#ecfdf5;color:#047857;}
+body.tema-claro .admin .sidebar .menu-item.active,
+body.tema-claro .admin .sidebar .menu-item.ativo,
+body.tema-claro .admin .sidebar .menu-item[aria-current="page"] {
+  background:#d1fae5;color:#047857;border-color:#a7f3d0;
+}
+body.tema-claro .admin :is(input,select,textarea,button,a):focus-visible {outline-color:#10b981;}

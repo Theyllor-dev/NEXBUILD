@@ -1,0 +1,38 @@
+/* Estilos isolados: não interferem no Header, Sidebar ou nas demais páginas. */
+.admin .acesso-negado-area {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(30px, 7vh, 85px) 12px 32px;
+  box-sizing: border-box;
+}
+.admin .acesso-negado-card {
+  width: min(100%, 600px);
+  padding: clamp(28px, 5vw, 52px) 24px;
+  border-radius: 18px;
+  background: var(--superficie, #151b2d);
+  border: 1px solid var(--borda, #27304a);
+  color: var(--texto-principal, #f5f7ff);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .16);
+  text-align: center;
+  box-sizing: border-box;
+}
+.admin .acesso-negado-icone { color: #9876ff; font-size: 42px; margin-bottom: 12px; }
+.admin .acesso-negado-card h1 { color: var(--texto-principal, #f5f7ff); font-size: clamp(22px, 3vw, 28px); margin: 0 0 8px; }
+.admin .acesso-negado-card p { color: var(--texto-secundario, #aeb5c9); margin: 0 auto 22px; line-height: 1.65; max-width: 420px; }
+.admin .acesso-negado-card button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  border: 0; border-radius: 10px; background: #7048e8; color: #fff;
+  padding: 12px 20px; font: inherit; font-size: 13px; cursor: pointer;
+}
+.admin .acesso-negado-card button:hover { background: #825ff2; }
+body.tema-claro .admin .acesso-negado-card { background: #fff; border-color: #d8e6db; color: #24352b; }
+body.tema-claro .admin .acesso-negado-card h1 { color: #24352b; }
+body.tema-claro .admin .acesso-negado-card p { color: #53675a; }
+body.tema-claro .admin .acesso-negado-card button { color: #fff; }
+@media (max-width: 700px) {
+  .admin .acesso-negado-area { padding: 24px 0 28px; }
+  .admin .acesso-negado-card { padding: 32px 18px; }
+}

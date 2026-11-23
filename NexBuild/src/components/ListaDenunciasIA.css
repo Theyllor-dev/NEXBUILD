@@ -1,0 +1,12 @@
+/* Feedback visual da análise de IA - compatível com temas claro e escuro */
+.nex-ia-pendente { padding: 5px 0 2px; }
+.nex-ia-estado { display: flex; align-items: flex-start; gap: 12px; }
+.nex-ia-estado > div { flex: 1; min-width: 0; }
+.nex-ia-estado strong { display: block; font-size: 14px; margin-bottom: 6px; }
+.nex-ia-estado .nex-subtexto { margin: 0; line-height: 1.6; }
+.nex-ia-girando { color: #a78bfa; flex-shrink: 0; margin-top: 2px; animation: nex-ia-spin 1.4s linear infinite; }
+.nex-ia-barra { margin-top: 15px; height: 4px; border-radius: 999px; background: rgba(167,139,250,.16); overflow: hidden; }
+.nex-ia-barra span { display: block; height: 100%; width: 35%; border-radius: inherit; background: #a78bfa; animation: nex-ia-progresso 1.8s ease-in-out infinite; }
+@keyframes nex-ia-spin { to { transform: rotate(360deg); } }
+@keyframes nex-ia-progresso { from { transform: translateX(-110%); } to { transform: translateX(310%); } }
+@media (prefers-reduced-motion: reduce) { .nex-ia-girando, .nex-ia-barra span { animation: none; } }
